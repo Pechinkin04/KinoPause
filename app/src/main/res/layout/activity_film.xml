@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".FilmActivity"
+    android:paddingVertical="@dimen/small_padding">
+
+
+    <ImageView
+        android:id="@+id/border"
+        android:layout_width="423dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:translationY="19dp"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:srcCompat="@drawable/barbie_poster_vertical_rus" />
+
+    <ImageView
+        android:id="@+id/unborder"
+        android:layout_width="417dp"
+        android:layout_height="219dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@+id/border"
+        tools:ignore="MissingConstraints"
+        tools:srcCompat="@android:drawable/screen_background_dark_transparent" />
+
+    <ImageView
+        android:id="@+id/film_poster"
+        android:layout_width="@dimen/layout_poster_width"
+        android:layout_height="@dimen/layout_poster_height"
+        android:scaleType="centerCrop"
+        android:translationX="5dp"
+        android:translationY="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:srcCompat="@drawable/barbie_poster_vertical_rus" />
+
+    <TextView
+        android:id="@+id/film_list_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="@dimen/small_padding"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/film_list_viewing_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/film_poster"
+        app:layout_constraintTop_toTopOf="@+id/film_poster" />
+
+    <TextView
+        android:id="@+id/film_list_viewing_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/film_list_release_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/film_list_title"
+        app:layout_constraintTop_toBottomOf="@+id/film_list_title" />
+
+    <TextView
+        android:id="@+id/film_list_release_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/film_list_genre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/film_list_viewing_time"
+        app:layout_constraintTop_toBottomOf="@+id/film_list_viewing_time" />
+
+    <TextView
+        android:id="@+id/film_list_genre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/film_poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/film_poster"
+        app:layout_constraintTop_toBottomOf="@+id/film_list_release_date" />
+
+    <ImageView
+        android:id="@+id/backimage_after"
+        android:layout_width="390dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="-25dp"
+        android:background="@drawable/round_outline"
+        android:clipToOutline="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/string_after"
+        app:srcCompat="?android:attr/fastScrollTrackDrawable" />
+
+    <TextView
+        android:id="@+id/string_after"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/scene_after_titres"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unborder" />
+
+    <ImageView
+        android:id="@+id/image_after"
+        android:layout_width="43dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/string_after"
+        app:layout_constraintEnd_toEndOf="@+id/string_after"
+        app:layout_constraintTop_toTopOf="@+id/string_after"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <Button
+        android:id="@+id/button_afterimage"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="400dp"
+        android:layout_height="110dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backimage_after"
+        app:layout_constraintEnd_toEndOf="@+id/backimage_after"
+        app:layout_constraintStart_toStartOf="@+id/backimage_after"
+        app:layout_constraintTop_toTopOf="@+id/backimage_after" />
+
+    <ImageView
+        android:id="@+id/backimage_timeouts"
+        android:layout_width="390dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/round_outline"
+        android:clipToOutline="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/time_outs"
+        app:srcCompat="?android:attr/fastScrollTrackDrawable" />
+
+    <TextView
+        android:id="@+id/time_outs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/time_outs"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/string_after" />
+
+    <TextView
+        android:id="@+id/count_outs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/time_outs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/time_outs" />
+
+    <Button
+        android:id="@+id/button_timeouts"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="400dp"
+        android:layout_height="110dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backimage_timeouts"
+        app:layout_constraintEnd_toEndOf="@+id/backimage_timeouts"
+        app:layout_constraintStart_toStartOf="@+id/backimage_timeouts"
+        app:layout_constraintTop_toTopOf="@+id/backimage_timeouts" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text="@string/back"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
